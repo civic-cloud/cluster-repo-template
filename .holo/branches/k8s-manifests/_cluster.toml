@@ -1,0 +1,8 @@
+[holomapping]
+files = [
+    "**",
+    "!.github/**",
+    "!docs/**",
+    "!README.md"
+]
+after = "*"
