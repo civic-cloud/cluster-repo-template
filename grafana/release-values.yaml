@@ -1,0 +1,12 @@
+# These values as applied last as downstream overrides
+# See https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+
+# TODO: customize hostname
+ingress:
+  enabled: true
+  hosts:
+    - metrics.k8s.example.org
+  tls:
+    - secretName: grafana-tls
+      hosts:
+        - metrics.k8s.example.org
