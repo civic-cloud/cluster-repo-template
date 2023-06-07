@@ -1,0 +1,5 @@
+[holomapping]
+root = "docs"
+files = [
+    "mkdocs.*.yml"
+]

@@ -1,0 +1,8 @@
+site_name: jarvus-ops-cluster
+repo_url: https://github.com/JarvusInnovations/jarvus-ops-cluster
+site_url: https://jarvusinnovations.github.io/jarvus-ops-cluster
+edit_uri: edit/main/docs
+
+extra:
+  cluster:
+    wildcard_hostname: ops.k8s.jarv.us
