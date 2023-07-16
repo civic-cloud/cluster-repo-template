@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+concurrency:
+  group: publish-docs
+  cancel-in-progress: true
+
 
 jobs:
   publish-docs:
