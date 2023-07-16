@@ -10,6 +10,7 @@ A template repository for a civic cloud cluster
         - For example, if you're using Azure Kubernetes Service, you would change that line to `holosource = "=>k8s-blueprint-aks"`
 - [ ] Customize email in 2 places in [`cert-manager.issuers.yaml`](./cert-manager.issuers.yaml)
 - [ ] Customize hostname in 2 places in [`grafana/release-values.yaml`](./grafana/release-values.yaml)
+- [ ] Ensure that under **Settings** / **Actions** / **General** / **Workflow permissions** for your cluster repository you have **Read and write permissions** enabled as well as **ALlow GitHub Actions to create and approve pull requests**
 - [ ] Add a secret named `BOT_GITHUB_TOKEN` containing a GitHub token that can write to the repository (this is needed for a [workflow to be triggered by another workflow](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow))
     1. Create or reuse GitHub bot user with write access to the cluster repository
     2. Grant the GitHub bot user the write access to the cluster repository, and ensure that its invitation is accepted
