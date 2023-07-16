@@ -4,6 +4,10 @@ A template repository for a civic cloud cluster
 
 ## After cloning this template
 
+- [ ] Switch to `cluster-template` variant specialized for your managed Kubernetes provider
+    1. Check the list of available `k8s-blueprint-*` [holobranches provided by `cluster-template`](https://github.com/civic-cloud/cluster-template/tree/develop/.holo/branches) for one matching the name of your IaaS provider's managed Kubernetes solution—if none match, skip this step and continue using the default generic distribution.
+    2. Edit [`.holo/branches/k8s-manifests/_cluster-template.toml`](./.holo/branches/k8s-manifests/_cluster-template.toml) and change `holosource = "=>k8s-blueprint"` to include the variant suffix
+        - For example, if you're using Azure Kubernetes Service, you would change that line to `holosource = "=>k8s-blueprint-aks"`
 - [ ] Customize email in 2 places in [`cert-manager.issuers.yaml`](./cert-manager.issuers.yaml)
 - [ ] Customize hostname in 2 places in [`grafana/release-values.yaml`](./grafana/release-values.yaml)
 - [ ] Add a secret named `BOT_GITHUB_TOKEN` containing a GitHub token that can write to the repository (this is needed for a [workflow to be triggered by another workflow](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow))
